@@ -11,17 +11,17 @@ class TestTextNode(unittest.TestCase):
 
     def test_dif(self):
         node = TextNode("this is a text node", TextType.ITALIC)
-        node2 = TextNode("this is another text node", TextType.PLAIN)
+        node2 = TextNode("this is another text node", TextType.TEXT)
         self.assertNotEqual(node, node2)
 
     def test_type_dif(self):
         node = TextNode("this is a text node", TextType.ITALIC)
-        node2 = TextNode("this is a text node", TextType.PLAIN)
+        node2 = TextNode("this is a text node", TextType.TEXT)
         self.assertNotEqual(node, node2)
 
     def test_edge_case_url(self):
         node = TextNode("that's a link node", TextType.LINK, "https://www.boot.dev")
-        node2 = TextNode("that's a link node", TextType.LINK)
+        node2 = TextNode("that's a link node", TextType.TEXT)
         self.assertNotEqual(node, node2)
 
 

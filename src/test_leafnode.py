@@ -27,3 +27,7 @@ class TestLeafNode(unittest.TestCase):
         node = LeafNode(None, None)
         node2 = LeafNode(None, None)
         self.assertEqual(node, node2)
+                
+        
+if __name__ == "__main__":
+    unittest.main()

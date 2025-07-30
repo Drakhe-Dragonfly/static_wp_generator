@@ -32,6 +32,7 @@ class TestHTMLNode(unittest.TestCase):
         node_result = node.props_to_html()
         node2_result = node2.props_to_html()
         self.assertEqual(node_result, node2_result)
-
-#{'what': 'question', "hey don't look at this entry": 'entry'})
-#{'what': 'question', "hey don't look at this entry": 'entry'})
+        
+        
+if __name__ == "__main__":
+    unittest.main()

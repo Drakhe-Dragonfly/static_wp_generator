@@ -30,3 +30,7 @@ class TestTNodeToHTMLLeafNode(unittest.TestCase):
         self.assertEqual(html_node.value, "")
         self.assertEqual(html_node.props["alt"], "image of the electrostatic cat of wikipedia")
         self.assertEqual(html_node.props["src"], "https://upload.wikimedia.org/wikipedia/commons/e/e0/Cat_demonstrating_static_cling_with_styrofoam_peanuts.jpg")
+        
+        
+if __name__ == "__main__":
+    unittest.main()

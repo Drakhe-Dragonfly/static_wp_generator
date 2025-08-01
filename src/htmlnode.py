@@ -16,7 +16,10 @@ class HTMLNode:
             return html_props
     
     def __eq__(self, htmlnode):
-        return (self.tag == htmlnode.tag) and (self.value == htmlnode.value) and (self.children == htmlnode.children) and (self.props == htmlnode.props)
+        try:
+            return (self.tag == htmlnode.tag) and (self.value == htmlnode.value) and (self.children == htmlnode.children) and (self.props == htmlnode.props)
+        except Exception:
+            return False
 
     def __repr__(self):
         return f"HTMLNode({self.tag}, {self.value}, {self.children}, {self.props})"

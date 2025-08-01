@@ -12,7 +12,10 @@ class TextNode:
         self.url = url
 
     def __eq__(self, textnode):
-        return self.text == textnode.text and self.text_type == textnode.text_type and self.url == textnode.url
+        try:
+            return self.text == textnode.text and self.text_type == textnode.text_type and self.url == textnode.url
+        except Exception:
+            return False
 
     def __repr__(self):
         return f"TextNode({self.text}, {self.text_type.value}, {self.url})"
